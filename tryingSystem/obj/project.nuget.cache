@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6onfhnOJWuI=",
+  "dgSpecHash": "+eFvULLn0q8=",
   "success": true,
-  "projectFilePath": "/Users/ahmedibrahim/Downloads/Courses/NET/tryingSystem/tryingSystem.csproj",
+  "projectFilePath": "/Users/ahmedibrahim/Documents/GitHub/Full-Stack/tryingSystem/tryingSystem.csproj",
   "expectedPackageFiles": [
     "/Users/ahmedibrahim/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/ahmedibrahim/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

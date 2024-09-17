@@ -6661,11 +6661,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ahmedibrahim/Downloads/Courses/NET/tryingSystem/tryingSystem.csproj",
+      "projectUniqueName": "/Users/ahmedibrahim/Documents/GitHub/Full-Stack/tryingSystem/tryingSystem.csproj",
       "projectName": "tryingSystem",
-      "projectPath": "/Users/ahmedibrahim/Downloads/Courses/NET/tryingSystem/tryingSystem.csproj",
+      "projectPath": "/Users/ahmedibrahim/Documents/GitHub/Full-Stack/tryingSystem/tryingSystem.csproj",
       "packagesPath": "/Users/ahmedibrahim/.nuget/packages/",
-      "outputPath": "/Users/ahmedibrahim/Downloads/Courses/NET/tryingSystem/obj/",
+      "outputPath": "/Users/ahmedibrahim/Documents/GitHub/Full-Stack/tryingSystem/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ahmedibrahim/.nuget/NuGet/NuGet.Config"
