@@ -1,4 +1,4 @@
-namespace tryingSystem.Models;
+ namespace tryingSystem.Models;
 
 public class ErrorViewModel
 {
