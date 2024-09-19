@@ -4,6 +4,7 @@ using HospitalSystem.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HospitalSystem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240919113501_CreateMessagesTable")]
+    partial class CreateMessagesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +25,7 @@ namespace HospitalSystem.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("HospitalSystem.Entities.Message", b =>
+            modelBuilder.Entity("HospitalSystem.Entities.AppDbContext+Message", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -107,7 +110,7 @@ namespace HospitalSystem.Migrations
                         });
                 });
 
-            modelBuilder.Entity("HospitalSystem.Entities.Message", b =>
+            modelBuilder.Entity("HospitalSystem.Entities.AppDbContext+Message", b =>
                 {
                     b.HasOne("HospitalSystem.Entities.UserAccount", "Doctor")
                         .WithMany()
