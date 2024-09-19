@@ -1,0 +1,20 @@
+@model IEnumerable<tryingSystem.Models.TaskInit>
+
+    <h2>Your Tasks</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Status</th> 
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model)
+            {
+            <tr>
+                <td>@task.Description</td>
+                <td>@(task.IsCompleted ? "Completed" : "Pending")</td>
+            </tr>
+            }
+        </tbody>
+    </table>

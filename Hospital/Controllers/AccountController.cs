@@ -61,6 +61,7 @@ namespace tryingSystem.Controllers
         [HttpPost]
         
         [HttpPost]
+[HttpPost]
 public IActionResult Login(LoginViewModel model)
 {
     if (ModelState.IsValid)
@@ -82,8 +83,8 @@ public IActionResult Login(LoginViewModel model)
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-            // Redirect to the Todo/Index page instead of SecurePage
-            return RedirectToAction("SecurePage");
+           
+            return RedirectToAction("Index", "Task");
         }
         else
         {
@@ -93,7 +94,10 @@ public IActionResult Login(LoginViewModel model)
     return View(model);
 }
 
-
+    public IActionResult AccessDenied()
+    {
+    return View();
+    }
         public IActionResult LogOut()
         {
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

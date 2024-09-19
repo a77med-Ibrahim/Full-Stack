@@ -30,6 +30,7 @@ namespace tryingSystem.Entities
         [MaxLength(50,ErrorMessage = "Max 20 charachters allowed.")]
         public string ?Password { get; set; }
 
-        public ICollection<TodoItemModel> TodoItems{get; set;}
+        [Required(ErrorMessage = "Role is Required")]
+        public string Role{get;set;} = "Nurse";
     }
 }
