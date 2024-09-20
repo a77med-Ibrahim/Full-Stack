@@ -1,12 +1,15 @@
 @{
     ViewBag.Title = "Create Message";
 }
-<h2>Create  a message for Nurses</h2>
+<h2>Create a message for Nurses</h2>
+
 <form method="post" asp-action="Create">
-    <textarea name="text" placeholder="Enter your message here.." ></textarea>
+    @Html.AntiForgeryToken()
+    <textarea name="text" placeholder="Enter your message here.."></textarea>
     <br/>
     <button type="submit">Send Message</button>
 </form>
+
 @if (TempData["Message"] != null)
 {
     <p>@TempData["Message"]</p>

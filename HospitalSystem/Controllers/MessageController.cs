@@ -27,6 +27,7 @@ namespace HospitalSystem.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(string text)
         {
             _logger.LogInformation("POST Create - Attempting to create a new message.");
