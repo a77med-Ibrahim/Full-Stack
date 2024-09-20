@@ -1,0 +1,13 @@
+@model IEnumerable<HospitalSystem.Entities.Message>
+
+<h2>Messages from Doctors</h2>
+
+@foreach (var message in Model)
+{
+    <div>
+        <p><strong>From Doctor:</strong> @message.Doctor.FirstName @message.Doctor.LastName</p>
+        <p>@message.Text</p>
+        <p><small>@message.CreatedAt.ToString("g")</small></p>
+        <hr/>
+    </div>
+}

@@ -1,0 +1,47 @@
+@model  IEnumerable<HospitalSystem.Entities.UserAccount>
+@{
+    ViewData["Title"] = "Role Management";
+}
+
+<h1>Role Management</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                Role
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem=>user.FirstName)</td>
+                <td>@Html.DisplayFor(modelItem=>user.LastName)</td>
+                <td>@Html.DisplayFor(modelItem=>user.Email)</td>
+                <td>@Html.DisplayFor(modelItem=>user.Role)</td>
+                <td>
+                    @if (user.Role != "Manager")
+                    {
+                        <form asp-action="AssingRole" method="post">
+                            <input type="hidden" name="userId" value="@user.Id"/>
+                            <button type="submit" name="role" value="Doctor" class="btn btn-primary">Doctor</button>
+                            <button type="submit" name="role" value="Nurse" class="btn btn-secondary">Nurse</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
